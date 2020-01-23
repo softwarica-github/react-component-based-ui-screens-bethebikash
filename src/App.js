@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Route,
   NavLink,
-  Link,
   Switch
 } from 'react-router-dom'
 import './style.css'
@@ -19,36 +18,30 @@ import { Navbar, Nav } from 'react-bootstrap'
 const Template = () => {
   return (
     <Router>
-      <div>
-        <header>
-          <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <div className="container">
-                <Nav className="mr-auto">
-                  <Nav.Link exact as={NavLink} activeClass="active" to="/">
-                    Dashboard
-                  </Nav.Link>
-                  <Nav.Link as={NavLink} to="/about">
-                    About
-                  </Nav.Link>
-                </Nav>
-                <Nav>
-                  <Nav.Link as={NavLink} to="/login">
-                    Login
-                  </Nav.Link>
-                </Nav>
-              </div>
-            </Navbar.Collapse>
-          </Navbar>
-        </header>
+      <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav" className="container">
+          <Nav className="mr-auto">
+            <Nav.Link exact as={NavLink} activeClassName="active" to="/">
+              Dashboard
+            </Nav.Link>
+            <Nav.Link as={NavLink} activeClassName="active" to="/about">
+              About
+            </Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link as={NavLink} activeClassName="active" to="/login">
+              Login
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+      <div className="container">
         <Switch>
-          <div className="container">
-            <Route path="/" component={Dashboard} exact />
-            <Route path="/register" component={Register} />
-            <Route path="/login" component={Login} />
-            <Route path="/about" component={About} />
-          </div>
+          <Route path="/" component={Dashboard} exact />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/about" component={About} />
         </Switch>
       </div>
     </Router>

@@ -8,7 +8,6 @@ export default class Register extends Component {
     return (
       <div className="my-container">
         <Form>
-
           <Form.Group controlId="formBasicName">
           <Form.Text className="text-muted">
               We'll never share your Username with anyone else.
@@ -29,7 +28,7 @@ export default class Register extends Component {
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="new-password" placeholder="Password" />
           </Form.Group>
           <Form.Group controlId="formBasicPhone">
             <Form.Label>Phone</Form.Label>

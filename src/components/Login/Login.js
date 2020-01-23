@@ -15,7 +15,7 @@ export default class Login extends Component {
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="new-password" placeholder="Password" />
           </Form.Group>
           <p>Dont have an account? <Link to="/register">Register</Link></p>
           <Button as={Link} to="/" variant="primary" type="submit" className="my-btn">

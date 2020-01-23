@@ -4,7 +4,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        This is from Dashboard Component
+        <h1>Welcome to the dashboard</h1>
       </div>
     )
   }
