@@ -11,17 +11,11 @@ export default class Login extends Component {
           <Form.Group controlId="formBasicUsername">
             <Form.Label>Username address</Form.Label>
             <Form.Control type="Username" placeholder="Enter Username" />
-            <Form.Text className="text-muted">
-              We'll never share your Username with anyone else.
-            </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
           </Form.Group>
           <p>Dont have an account? <Link to="/register">Register</Link></p>
           <Button as={Link} to="/" variant="primary" type="submit" className="my-btn">
